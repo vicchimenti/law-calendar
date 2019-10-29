@@ -14,7 +14,7 @@ try {
 
     //load T4EventsCalendar
     if (!is_file($_SERVER['DOCUMENT_ROOT']  . $t4_module['config'].'config.php')) {
-        throw new \Exception("You need to load the T4EventsCalendar Class Test2", 1);
+        throw new \Exception("You need to load the T4EventsCalendar Class", 1);
     }
 
     //load PHAR file
