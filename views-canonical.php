@@ -1,5 +1,6 @@
 <?php
-/*<t4 type="navigation" name="Events Calendar: create download.php" id="668" />  <!-- generate download.php -->*/
+/*<!-- generate download.php -->*/
+<t4 type="navigation" name="Events Calendar: create download.php" id="668" />
 
 /* Version 2.2 */
 $t4_module['config']    = '<t4 type="content" name="PHP Events Calendar Config Link" output="linkurl" modifiers="nav_sections" />';
