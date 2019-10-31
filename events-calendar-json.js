@@ -13,7 +13,7 @@ try {
         return processTags(formatString);
   }
 
-  var list = {};
+  var list = [];
 
 
   list['content_id']      = processTags('<t4 type="meta" meta="content_id" />');
