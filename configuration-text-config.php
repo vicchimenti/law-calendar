@@ -84,7 +84,7 @@ if (!class_exists('T4EventsCalendar')) {
             self::$configSettings["cache_directory"] = sys_get_temp_dir().'/php-events-calendar/';
 
             // set the enabled sources
-            //Config::set('enabled_sources', ['TerminalFourEvents', 'GoogleCalendarEvents', 'IcalEvents']);
+            Config::set('enabled_sources', ['TerminalFourEvents', 'GoogleCalendarEvents', 'IcalEvents']);
             if (empty($t4_config['sources'])) {
                 throw new \Exception("Sources is empty");
             }
