@@ -149,7 +149,7 @@ if (!class_exists('T4EventsCalendar')) {
             }
 
             // initialise Container
-            //$cont = new Container();
+            $cont = new Container();
 
             $options = $t4_config['options'];
 
