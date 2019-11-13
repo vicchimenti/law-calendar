@@ -50,7 +50,6 @@ function runAjax(link,loadArea,reloadLoadArea,addcache) {
     }
     categories_trigger();
   });
-
 }
 
 
