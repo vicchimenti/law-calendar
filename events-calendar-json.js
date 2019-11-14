@@ -25,7 +25,7 @@ try {
   list['location']        = processTags('<t4 type="content" name="Venue" output="normal" modifiers="striptags,htmlentities" />');
   list['url']             = processTags('<t4 type="content" name="Title" output="fulltext" use-element="true" filename-element="Title" modifiers="striptags,htmlentities" />');
 
- list['resultHTML'] 	  =	getLayout('text/single-calendar-event');
+// list['resultHTML'] 	  =	getLayout('text/single-calendar-event');
 
 
   //Dates
