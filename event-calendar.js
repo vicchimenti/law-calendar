@@ -1,3 +1,6 @@
+function load_jQuery () {
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+}
 var cache = [];
 
 $(window).on('popstate', function() {
