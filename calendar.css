@@ -1,0 +1,377 @@
+/* Calendar Switches*/
+.no-past .event-past {
+  display: none;
+}
+
+h2.eventdate {
+  margin-bottom: 0;
+}
+
+#calendar_events div.event {
+  margin-bottom: .75rem;
+}
+
+#calendar_events div.event + h2.eventdate {
+  margin-top: 1.25em;
+}
+
+.view-switchers {
+  margin-bottom: 1.25rem;
+}
+
+#searchoptions-generic fieldset {
+  border: 0;
+  padding: 0;
+}
+
+#searchoptions-generic fieldset legend {
+  padding-bottom: .5rem;
+}
+
+.event-search-widget fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.event-search-widget fieldset legend {
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+#past_events legend {
+  display: none;
+  visibility: hidden;
+}
+
+.past-events {
+  background: #e9e9e9;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.past-events p {
+  margin-bottom: 0;
+}
+
+.past-events fieldset {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+  border: 0;
+}
+
+#search_field label,
+#jumptoform label {
+  position: absolute;
+  z-index: -1;
+}
+
+#jumptoform label
+#calendar_box_custom table,
+#calendar_box table {
+  width: 100%;
+  text-align: center;
+}
+
+#jumptoform label
+#calendar_box_custom table tr th,
+#jumptoform label
+#calendar_box_custom table tr td,
+#calendar_box table tr th,
+#calendar_box table tr td {
+  width: calc(100%/7);
+}
+
+#jumptoform label
+#calendar_box_custom table tr th.hasEvents,
+#jumptoform label
+#calendar_box_custom table tr td.hasEvents,
+#calendar_box table tr th.hasEvents,
+#calendar_box table tr td.hasEvents {
+  padding: 0;
+}
+
+#jumptoform label
+#calendar_box_custom table tr th.hasEvents a,
+#jumptoform label
+#calendar_box_custom table tr td.hasEvents a,
+#calendar_box table tr th.hasEvents a,
+#calendar_box table tr td.hasEvents a {
+  color: white;
+  display: block;
+  padding: 9px 0;
+  height: 100%;
+  background: #990616;
+}
+
+#jumptoform label
+#calendar_box_custom table tr th.hasEvents.outperiodday a,
+#jumptoform label
+#calendar_box_custom table tr td.hasEvents.outperiodday a,
+#calendar_box table tr th.hasEvents.outperiodday a,
+#calendar_box table tr td.hasEvents.outperiodday a {
+  opacity: 0.5;
+}
+
+#jumptoform label
+#calendar_box_custom table tr th .prev-next-link,
+#calendar_box table tr th .prev-next-link {
+  text-indent: -9999px;
+  display: block;
+  float: left;
+}
+
+.calendar-dayrow .today a {
+  position: relative;
+}
+
+.calendar-dayrow .today a:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  bottom: 4px;
+  left: calc(50% - 2px);
+}
+
+/* Large Calendar*/
+#calendar_page table {
+  width: 100%;
+  text-align: center;
+}
+
+#calendar_page table tr th {
+  width: calc(100%/7);
+  text-align: center;
+}
+
+#calendar_page table tr.calendar-box-header th {
+  font-size: 1em;
+}
+
+#calendar_page table tr.calendar-box-header th .prev-next-link {
+  text-indent: -9999px;
+  display: block;
+  float: left;
+}
+
+#calendar_page table tr.calendar-dayhead th {
+  font-size: 0.8em;
+}
+
+#calendar_page table tbody tr.calendar-dayrow td {
+  width: calc(100%/7);
+  vertical-align: top;
+  padding: 0.1em;
+  height: 8em;
+  border: 1px solid #eee;
+}
+
+#calendar_page table tbody tr.calendar-dayrow td.fillday {
+  background-color: #eee;
+}
+
+#calendar_page table tbody tr.calendar-dayrow td.fillday span {
+  color: #999;
+}
+
+#calendar_page table tbody tr.calendar-dayrow span {
+  font-size: 1.2em;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .cal-event a {
+  font-size: 0.80em;
+  line-height: 1em;
+  display: block;
+  max-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.3em;
+  background-color: #990616;
+  margin-bottom: 2px;
+  color: #FFF;
+  word-break: break-all;
+  color: #FFF;
+  white-space: unset;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .cal-event.end a {
+  padding-left: 0px;
+  background-color: #000;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .cal-event.start a {
+  padding-right: 0px;
+  background-color: #000;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .cal-event.middle a {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #000;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info {
+  display: block;
+  width: 200px;
+  min-height: 100px;
+  background-color: white;
+  border: 1px solid #000;
+  position: absolute;
+  margin-left: calc(100%/7);
+  margin-top: -39px;
+  /* min-height/2 */
+  z-index: 100;
+  color: #000;
+  font-size: 1em;
+  padding: 0.3em;
+  display: none;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info:after, #calendar_page table tbody tr.calendar-dayrow .tooltip-info:before {
+  right: 100%;
+  top: 26px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info:after {
+  border-color: transparent;
+  border-right-color: white;
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info:before {
+  border-color: transparent;
+  border-right-color: #000;
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info.active {
+  display: block;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info h2 {
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info div.info {
+  font-size: 0.80em;
+  margin-bottom: 0.3em;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info div.info p {
+  font-size: 1em;
+  margin: 0px;
+  padding-bottom: 0px;
+  line-height: 1em;
+}
+
+#calendar_page table tbody tr.calendar-dayrow .tooltip-info div.short-desc {
+  font-size: 0.80em;
+}
+
+.event-date-box {
+  display: inline-block;
+  width: 17.5%;
+  min-width: 144px;
+  vertical-align: top;
+}
+
+.event-info-box {
+  display: inline-block;
+  width: 76%;
+  vertical-align: top;
+}
+
+.filter-tags-container span {
+  display: inline-block;
+  padding: 0.35rem;
+  margin-bottom: 0.35rem;
+  background: #eee;
+  color: #555;
+}
+
+.event-filters ul {
+  display: inline-block;
+}
+
+.event-filters ul li {
+  display: inline-block;
+  background: #e9e9e9;
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+
+#searchoptions-dates input[type=submit] {
+  background: #990616;
+  border: none;
+  min-height: 44px;
+}
+
+.desk_check {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  margin-top: -0.5rem;
+  left: -100px;
+  width: 100px;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.desk_check:hover {
+  background: black;
+}
+
+.desk_check span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.125rem;
+  font-size: 0.75em !important;
+}
+
+.desk_check a {
+  font-size: 0.75em !important;
+  line-height: 1em !important;
+  display: block !important;
+  max-height: 26px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding: none !important;
+  background: none !important;
+  margin-bottom: 2px !important;
+  word-break: break-word !important;
+  display: block !important;
+  color: #FFF !important;
+  text-decoration: underline !important;
+  margin-bottom: 0.125rem !important;
+}
+
+.desk_check a:hover {
+  text-decoration: none !important;
+  color: #FFF !important;
+}
