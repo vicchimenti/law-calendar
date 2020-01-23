@@ -1,0 +1,377 @@
+/* Calendar Switches*/
+
+
+.no-past .event-past {
+	display: none;
+}
+
+div.ical{
+	a.calendar-button{
+
+	}
+}
+
+h2.eventdate {
+	margin-bottom: 0;
+}
+
+#calendar_events {
+	div.event {
+		margin-bottom: .75rem;
+		& + h2.eventdate {
+		    margin-top: 1.25em;
+		}
+	}
+
+}
+
+.view-switchers {
+	margin-bottom: 1.25rem;
+}
+
+#searchoptions-generic{
+    fieldset {
+        border: 0;
+        padding: 0;
+        legend {
+            padding-bottom: .5rem;
+        }
+    }
+
+}
+
+
+
+
+.event-search-widget{
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		legend {
+			font-size: 0.875rem;
+		    color: #4d4d4d;
+		    cursor: pointer;
+		    display: block;
+		    font-weight: normal;
+		    margin-bottom: 0.5rem;
+		}
+	}
+}
+#past_events legend {
+	display: none;
+	visibility: hidden;
+}
+.past-events {
+    background: #e9e9e9;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    p {
+        margin-bottom: 0;
+    }
+    fieldset {
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+        border: 0;
+    }
+}
+#search_field label,
+#jumptoform label {
+	position: absolute;
+    z-index: -1;
+}
+
+#dates_field label {
+
+}
+
+#jumptoform label
+
+#calendar_box_custom,
+#calendar_box{
+	table{
+		width: 100%;
+		text-align: center;
+		tr{
+			th,
+			td{
+				width: calc(100%/7);
+				&.hasEvents {
+					padding: 0;
+					& a {
+						color: white;
+					    display: block;
+					    padding: 9px 0;
+					    height: 100%;
+					    background: #990616;
+					}
+					&.outperiodday a {
+						opacity: 0.5;
+					}
+				}
+			}
+			th .prev-next-link {
+					text-indent: -9999px;
+					display: block;
+					float: left;
+			}
+		}
+	}
+}
+
+.calendar-dayrow .today a {
+    position: relative;
+    &:after {
+        content: '';
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: rgba(255,255,255,.75);
+        border-radius: 50%;
+        bottom: 4px;
+        left: calc(50% - 2px);
+    }
+}
+
+$hei-event: 26px;
+$hei-tooltip: 100px;
+$arrow-size: 6px;
+
+/* Large Calendar*/
+#calendar_page{
+	table{
+        width: 100%;
+        text-align: center;
+		tr{
+			th{
+				width: calc(100%/7);
+				text-align: center;
+			}
+			&.calendar-box-header{
+				th{
+					font-size: 1em;
+					.prev-next-link {
+						text-indent: -9999px;
+						display: block;
+						float: left;
+					}
+				}
+			}
+			&.calendar-dayhead{
+				th{
+					font-size: 0.8em;
+				}
+			}
+		}
+		tbody{
+			tr{
+				&.calendar-dayrow{
+					td{
+						width: calc(100%/7);
+						vertical-align: top;
+						padding: 0.1em;
+						height: 8em;
+
+						border: 1px solid #eee;
+						&.fillday{
+							background-color: #eee;
+							span{
+								color: #999;
+							}
+						}
+					}
+					span{
+						font-size: 1.2em;
+						border-radius:50%;
+						width:30px;
+						height:30px;
+						line-height:30px;
+						text-align: center;
+						display: inline-block;
+						font-weight: bold;
+					}
+					.cal-event{
+						a{
+							font-size: 0.80em;
+						    line-height: 1em;
+						    display: block;
+						    max-height: 2rem;
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    padding: 0.3em;
+						    background-color: #990616;
+						    margin-bottom: 2px;
+						    color: #FFF;
+						    word-break: break-all;
+						    color: #FFF;
+						    white-space: unset;
+						}
+						&.end {
+							a{
+								padding-left:0px;
+								background-color: #000;
+							}
+						}
+						&.start {
+							a{
+								padding-right:0px;
+								background-color: #000;
+							}
+						}
+						&.middle {
+							a{
+								padding-left:0px;
+								padding-right:0px;
+								background-color: #000;
+							}
+						}
+					}
+					.tooltip-info{
+						display: block;
+						width: 200px;
+						min-height: $hei-tooltip;
+						background-color: rgba(255, 255, 255, 1);
+						border: 1px solid #000;
+						position: absolute;
+						margin-left:  calc(100%/7);
+						margin-top: -($hei-event*3/2); /* min-height/2 */
+						z-index:100;
+						color: #000;
+						font-size: 1em;
+						padding: 0.3em;
+						display: none;
+						&:after,
+						&:before {
+							right: 100%;
+							top: $hei-event;
+							border: solid transparent;
+							content: " ";
+							height: 0;
+							width: 0;
+							position: absolute;
+							pointer-events: none;
+						}
+						&:after{
+							border-color: transparent;
+							border-right-color: rgba(255, 255, 255, 1);
+							border-width: $arrow-size;
+							margin-top: -$arrow-size;
+						}
+						&:before {
+							border-color: transparent;
+							border-right-color: #000;
+							border-width: $arrow-size+1;
+							margin-top: -($arrow-size+1);
+						}
+						&.active{
+							display:block;
+						}
+						h2{
+							font-size: 1em;
+							line-height: 1em;
+							margin-top: 0.1em;
+							margin-bottom: 0.1em;
+						}
+						div.info{
+							font-size: 0.80em;
+							margin-bottom: 0.3em;
+							p{
+								font-size: 1em;
+								margin:0px;
+								padding-bottom:0px;
+								line-height: 1em;
+
+							}
+						}
+						div.short-desc{
+							font-size: 0.80em;
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
+
+.event-date-box {
+    display: inline-block;
+    width: 17.5%;
+  	min-width: 144px;
+    vertical-align: top;
+}
+
+.event-info-box {
+    display: inline-block;
+    width: 76%;
+    vertical-align: top;
+}
+
+.filter-tags-container span {
+	display: inline-block;
+	padding: 0.35rem;
+	margin-bottom: 0.35rem;
+	background: #eee;
+	color: #555;
+}
+
+.event-filters {
+    ul {
+        display: inline-block;
+        li {
+            display: inline-block;
+            background: #e9e9e9;
+            padding: 0.25rem;
+            margin: 0.25rem;
+        }
+    }
+}
+
+#searchoptions-dates {
+    input[type=submit] {
+        background: #990616;
+        border: none;
+        min-height: 44px;
+    }
+}
+
+.desk_check {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    position: absolute;
+    margin-top: -0.5rem;
+    left: -100px;
+    width: 100px;
+	padding: 0.25rem;
+	font-size: 0.9rem;
+	&:hover {
+		background: black;
+	}
+	span {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 0.125rem;
+		font-size: 0.75em !important;
+	}
+	a {
+		font-size: 0.75em !important;
+		line-height: 1em !important;
+		display: block !important;
+		max-height: 26px !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		padding: none !important;
+		background: none !important;
+		margin-bottom: 2px !important;
+		word-break: break-word !important;
+		display: block !important;
+		color: #FFF !important;
+		text-decoration: underline !important;
+		margin-bottom: 0.125rem !important;
+		&:hover {
+			text-decoration: none !important;
+			color: #FFF !important;
+		}
+	}
+}
