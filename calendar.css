@@ -375,3 +375,18 @@ h2.eventdate {
   text-decoration: none !important;
   color: #FFF !important;
 }
+
+
+/** Law-Calendar Page Layout Custom additions  **/
+a.calendar-button {
+    background-color: #088099;
+    color: #f7f7f7;
+}
+
+#MainZone {
+    padding: 10px 5px 10px 30px;
+}
+
+#SidebarZone {
+    padding: 30px 5px 10px 5px;
+}
